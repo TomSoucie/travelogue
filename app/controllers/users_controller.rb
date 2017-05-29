@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     # byebug
     @user = User.create!(user_params)
-    # flash[:success] = "Successfully Logged In!"
+    flash[:success] = "Successfully Logged In!"
     redirect_to user_path(@user)
   end
 

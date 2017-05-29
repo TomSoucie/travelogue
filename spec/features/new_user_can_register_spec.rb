@@ -24,7 +24,7 @@ RSpec.feature "Visitor can register to become a user" do
     click_on "Register User"
 
     expect(current_path).to eq(user_path(User.last))
-    # expect(page).to have_content("Successfully Logged In!")
+    expect(page).to have_content("Successfully Logged In!")
     expect(page).to have_content("Welcome Donald Roberts")
   end
 end
