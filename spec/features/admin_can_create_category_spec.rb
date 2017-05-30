@@ -17,12 +17,10 @@ RSpec.feature "Admin creates a category" do
       password: "pass5", role: 1)
 
     visit new_admin_category_path
+
+    fill_in "Name", with: "Weekend"
+    fill_in "Description", with: "A trip 2-3 days in duration"
     click_on "New Category"
-    within("form") do
-      fill_in "Name", with: "Weekend"
-      fill_in "Description", with: "A trip 2-3 days in duration"
-      click_on "Submit"
-    end
     expect(page).to have_content("New Category Created")
     expect(page).to have_content("Weekend")
   end
