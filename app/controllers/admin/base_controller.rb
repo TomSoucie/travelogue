@@ -1,4 +1,5 @@
-class Admin::RegisteredController < ApplicationController
+class Admin::BaseController < ApplicationController
+
   before_action :require_admin
 
   def require_admin
