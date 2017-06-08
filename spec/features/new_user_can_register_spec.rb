@@ -1,17 +1,5 @@
 require 'rails_helper'
 
-=begin
-As a visitor
-When I visit the login page
-And I fill_in my name in the name field
-And I fill_in a unique email in the email field
-And I fill_in the password field
-And I click_on "Register User"
-
-I should expect the path to be user_path(User.last)
-I should expect the page to have flash and welcome message
-=end
-
 RSpec.feature "Visitor can register to become a user" do
   scenario "an unregistered visitor can register as a user" do
     visit new_user_path
