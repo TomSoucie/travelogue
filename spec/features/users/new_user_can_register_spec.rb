@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Visitor can register to become a user" do
-  scenario "an unregistered visitor can register as a user" do
+RSpec.feature "User creates new account" do
+  scenario "an unregistered user can sign up for a new account" do
     visit new_user_path
 
     expect(page).to have_content("Sign up for new Account")
@@ -12,7 +12,7 @@ RSpec.feature "Visitor can register to become a user" do
     click_on "Register User"
 
     expect(current_path).to eq(user_path(User.last))
-    expect(page).to have_content("Successfully Logged In!")
+    expect(page).to have_content("Successfully logged in!")
     expect(page).to have_content("Welcome Donald Roberts")
   end
 end

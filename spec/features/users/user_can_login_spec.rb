@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "User visits login page" do
+RSpec.feature "User logs into application" do
   scenario "a user can log in" do
     registered = User.create(name: "Donald Roberts",
       email: "dr@gmail.com", password: "passw", role: 0)
