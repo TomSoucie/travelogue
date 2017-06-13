@@ -22,7 +22,8 @@ RSpec.feature "Admin creates a category" do
 
     fill_in "Name", with: "Weekend"
     fill_in "Description", with: "A trip 2-3 days in duration"
-    click_on "New Category"
+    click_on "Submit"
+
     expect(page).to have_content("Category created successfully")
     expect(page).to have_content("New Category Created")
     expect(page).to have_content("Weekend")
