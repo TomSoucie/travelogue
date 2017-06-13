@@ -25,6 +25,5 @@ RSpec.feature "admin can create an image" do
 
     expect(page).to have_content("Image created successfully!")
     expect(page).to have_content("Adventure")
-
   end
 end
