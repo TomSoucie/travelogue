@@ -1,0 +1,9 @@
+<h1>Images Index</h1>
+
+<% @images.each do |image| %>
+  <div class=image_<% image.id %>>
+    <%= image.description %><br/>
+    <img src=image.url alt="Bikepacking" style="width:300px;height:300px;">
+  </div>
+<% end %>
+<%= link_to "Ideas", ideas_path %>

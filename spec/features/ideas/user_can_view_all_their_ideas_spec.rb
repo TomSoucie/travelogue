@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "user can view all their ideas" do
-  scenario "user has ideas and can view them" do
+  xscenario "user has ideas and can view them" do
     let!(:idea_1) {create(:idea)}
     let!(:idea_2) {create(:idea)}
     let!(:idea_3) {create(:idea)}
