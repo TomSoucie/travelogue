@@ -14,7 +14,4 @@ FactoryGirl.define do
     end
   end
 
-  # trait :with_photo do
-  #   photo { fixture_file_upload(Rails.root.join("spec", "support", "fixtures", "bikepacking.jpg"), 'image/jpg') }
-  # end
 end
