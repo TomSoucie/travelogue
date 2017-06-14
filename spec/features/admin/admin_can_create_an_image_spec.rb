@@ -20,8 +20,8 @@ RSpec.feature "admin can create an image" do
     visit new_admin_image_path
 
     fill_in "Description", with: "Adventure"
-    fill_in "URL", with: "https://wpassets.trainingpeaks.com/wp-content/uploads/2016/09/19153513/bikepacking-training-preparation-700x394.jpg"
-    click_on "Submit"
+    # fill_in "url", with: "https://wpassets.trainingpeaks.com/wp-content/uploads/2016/09/19153513/bikepacking-training-preparation-700x394.jpg"
+    click_on "Create"
 
     expect(page).to have_content("Image created successfully!")
     expect(page).to have_content("Adventure")
