@@ -10,7 +10,7 @@ RSpec.feature "admin can create an image" do
 
   scenario "admin user can navigate to a new image page" do
 
-    visit new_admin_category_path
+    visit new_admin_image_path
 
     expect(page).to have_content("New Image")
   end
