@@ -4,4 +4,7 @@ class Admin::CategoriesController < Admin::BaseController
     @category = Category.new
   end
 
+  def index
+    @categories = Category.all
+  end
 end

@@ -2,9 +2,9 @@ FactoryGirl.define do
 
   factory :user do
     name 'Tom'
-    password 'tom1858'
+    password 'tompassw'
 
-    sequence(:email) { |n| "user-#{n}" }
+    sequence(:email) { |n| "user-#{n}@user.com" }
   end
 
   trait :as_registered do
@@ -14,5 +14,5 @@ FactoryGirl.define do
   trait :as_admin do
     role 'admin'
   end
-  
+
 end

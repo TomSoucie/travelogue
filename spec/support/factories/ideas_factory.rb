@@ -8,10 +8,8 @@ FactoryGirl.define do
     end
 
     description "Next great trip"
-
-    before(:create) do |idea|
-      idea.categories << create(:category)
-    end
+    user
+    category
   end
 
 end
