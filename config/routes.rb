@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :images, only: [:index, :show]
+
+  resources :ideas
 end
