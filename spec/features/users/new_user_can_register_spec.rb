@@ -13,6 +13,6 @@ RSpec.feature "User creates new account" do
 
     expect(current_path).to eq(user_path(User.last))
     expect(page).to have_content("Successfully logged in!")
-    expect(page).to have_content("Welcome Donald")
+    expect(page).to have_content("Donald")
   end
 end
