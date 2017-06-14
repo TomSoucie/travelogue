@@ -2,10 +2,9 @@ require 'rails_helper'
 
 RSpec.feature "user can create a new idea" do
   scenario "user logs in and can create a new idea" do
-    user = User.create(name: "Donald Roberts",
-      email: "dr@gmail.com", password: "passw", role: 0)
 
     visit login_path
+
     within("form") do
       fill_in "Email", with: registered.email
       fill_in "Password", with: registered.password

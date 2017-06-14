@@ -1,11 +1,14 @@
 require 'rails_helper'
 
-RSpec.feature "Admin creates a category" do
-  scenario "admin user can navigate to a new category page" do
-    admin = User.create(name: "Tom Soucie", email: "ts@gmail.com",
-      password: "pass5", role: 1)
+RSpec.feature "admin creates a category" do
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+  before do
+    @admin = create(:user, role: 'admin')
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@admin)
+  end
+
+  scenario "admin user can navigate to a new category page" do
 
     visit new_admin_category_path
 
@@ -13,10 +16,6 @@ RSpec.feature "Admin creates a category" do
   end
 
   scenario "admin user can create a new category" do
-    admin = User.create(name: "Tom Soucie", email: "ts@gmail.com",
-      password: "pass5", role: 1)
-
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
     visit new_admin_category_path
 
