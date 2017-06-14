@@ -3,7 +3,7 @@ include ActionDispatch::TestProcess
 FactoryGirl.define do
 
   factory :idea do
-    sequence(:name) do |n|
+    sequence(:title) do |n|
       "Trip Idea#{n}"
     end
 
