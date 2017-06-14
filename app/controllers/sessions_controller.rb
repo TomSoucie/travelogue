@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       redirect_to admin_categories_path
       else
         flash[:success] = "Successfully logged in"
-        redirect_to users_path(@user)
+        redirect_to user_path(@user)
       end
     else
       flash[:error] = "Incorrect username or password"
