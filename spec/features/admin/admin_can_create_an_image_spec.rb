@@ -8,6 +8,13 @@ RSpec.feature "admin can create an image" do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@admin)
   end
 
+  scenario "admin user can navigate to a new image page" do
+
+    visit new_admin_category_path
+
+    expect(page).to have_content("New Image")
+  end
+
   scenario "administrator can add an image" do
 
     visit new_admin_image_path
