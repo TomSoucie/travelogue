@@ -11,7 +11,7 @@ RSpec.describe "user can edit an idea" do
       visit ideas_path(@idea)
   end
 
-  scenario "user can select an idea and edit" do
+  xscenario "user can select an idea and edit" do
     idea = Idea.all[3]
     visit edit_idea_path(idea)
 

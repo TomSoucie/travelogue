@@ -5,7 +5,7 @@ RSpec.feature "user can view a single idea" do
   let!(:idea_2) {create(:idea)}
   let!(:idea_3) {create(:idea)}
 
-  scenario "user has ideas and can view a single idea" do
+  xscenario "user has ideas and can view a single idea" do
     visit idea_path(idea_1)
     expect(page).to have_content(idea_1.title)
     expect(page).to not_have_content(idea_2.title)
