@@ -12,8 +12,8 @@ RSpec.feature "admin can log in as admin" do
       click_on "Login"
     end
 
-    expect(current_path).to eq(categories_path)
-    expect(page).to have_content("Successfully Logged in as admin")
+    expect(current_path).to eq(admin_categories_path)
+    expect(page).to have_content("Successfully logged in as admin")
     expect(page).to have_content("Logout")
   end
 end

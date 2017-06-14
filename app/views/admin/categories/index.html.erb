@@ -1,0 +1,9 @@
+<h1>Categories Index</h1>
+
+<% @categories.each do |category| %>
+  <div class=category_<% category.id %>>
+    <%= link_to category.title, category_path(category) %><br/>
+    <%= link_to "Create New Category", admin_new_category_path %>
+    <%= link_to "Delete", admin_category_path(category), method: "delete" %>
+  </div>
+<% end %>
