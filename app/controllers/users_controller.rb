@@ -4,10 +4,17 @@ class UsersController < ApplicationController
   end
 
   def create
-    # byebug
-    @user = User.create!(user_params)
-    flash[:success] = "Successfully logged in!"
-    redirect_to user_path(@user)
+    @user = User.create(user_params)
+
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:success] = "Successfully logged in!"
+      redirect_to user_path(@user)
+    else
+      byebug
+      flash[:message] = "Incorrect username or password"
+      render :new
+    end
   end
 
   def show
