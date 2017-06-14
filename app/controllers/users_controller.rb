@@ -11,7 +11,6 @@ class UsersController < ApplicationController
       flash[:success] = "Successfully logged in!"
       redirect_to user_path(@user)
     else
-      byebug
       flash[:message] = "Incorrect username or password"
       render :new
     end
